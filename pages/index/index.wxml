@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="upper_container">
+  <view class="uploader-container" >
+    <image class="image_display" mode="aspectFit" src="{{imgUrl}}"></image>
+    <canvas canvas-id="wmPic" class="canvas_display" style="transform:scale({{displayScale}}); -webkit-transform:scale({{displayScale}});"></canvas>
+  </view>
+  <view class="blockers">
+    <view class="blocker">
+    <image class="blocker_title" bindtap="scanCode" src="scan.png"></image>
+    <view class="blocker_text">{{codeValue}}</view>
+    </view>
+    <view class="blocker">
+    <image class="blocker_title" bindtap="opensettings" src="settings.png"></image>
+    <view class="blocker_text">设置</view>
+    </view>
+    <view class="blocker">
+    <image class="blocker_title" bindtap="doUpload" src="openimage.png"></image>
+    <view class="blocker_text">打开图片</view>
+    </view>
+    <view class="blocker">
+    <image class="blocker_title" bindtap="saveImage" src="saveimage.png"></image>
+    <view class="blocker_text">保存图片</view>
+    </view>
+  </view>
+</view>
+
+<view class="container">
+  <view class="banner">
+  <view class="banner_title">报价(￥)</view>
+  <!--view class="banner_price">{{priceValue}}</view>
+  <view class="banner_title">RMB</view-->
+  <input class="banner_price" type="digit" bindinput="priceRMBBindKeyInput" value="{{priceValueRMB}}"></input>
+  </view>
+
+  <view class="subbanner">
+  <view class="subbanner_title">毛利  $</view>
+  <input class="banner_price" maxlength="10" bindinput="profitBindKeyInput" type="digit" value="{{profit}}"/>
+  <view class="subbanner_title">毛利率</view>
+  <view class="subbanner_price">{{profitRate}}%</view>
+  </view>
+
+  <view class="section" style="  background-color: {{lineColors[0]}}">
+  <view class="section_title">原 价($)</view>
+  <input class="input_editor" maxlength="15" bindinput="oriBindKeyInput" bindfocus = "changelinecolor" bindblur="cleanlinecolor" type="digit" placeholder="price mark" data-id ="0" />
+  </view>
+
+  <view class="section" style="  background-color: {{lineColors[1]}}">
+  <view class="section_title">折扣百分比(%)</view>
+  <input class="input_editor" maxlength="10" bindinput="discountBindKeyInput" type="digit" placeholder="{{discount}}" bindfocus = "changelinecolor" bindblur="cleanlinecolor" data-id ="1" />
+  </view>
+
+  <view class="section">
+  <view class="section_title">折后价($)</view>
+  <input class="section_price" placeholder="{{payValue}}" disabled="true"/>
+  </view>
+
+  <view class="section" style="  background-color: {{lineColors[3]}}">
+  <view class="section_title">运 费($)</view>
+  <input class="input_editor" maxlength="10" bindinput="deliveryBindKeyInput" type="digit" placeholder="{{delivery}}" bindfocus = "changelinecolor" bindblur="cleanlinecolor" data-id ="3"/>
+  </view>
+
+</view>
+
+
+
+ 
+
+

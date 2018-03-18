@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/settings/settings"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#21215f",
+    "navigationBarBackgroundColor": "#21215f",
+    "navigationBarTitleText": "代购计算器",
+    "navigationBarTextStyle": "white"
+  }
+}

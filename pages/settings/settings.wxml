@@ -1,0 +1,35 @@
+<!--pages/settings.wxml-->
+<view class="container">
+  <view class="section" style="  background-color: {{lineColors[0]}}">
+  <view class="section_title">税率</view>
+  <input class="input_editor" maxlength="15" bindinput="taxBindKeyInput" bindfocus = "changelinecolor" bindblur="cleanlinecolor" type="digit" placeholder="{{tax}}" data-id ="0" />
+  </view>
+
+  <view class="section" style="  background-color: {{lineColors[1]}}">
+  <view class="section_title">汇率</view>
+  <input class="input_editor" maxlength="15" bindinput="currencyBindKeyInput" bindfocus = "changelinecolor" bindblur="cleanlinecolor" type="digit" placeholder="{{currency}}" data-id ="1" />
+  </view>
+
+  <view class="section" style="  background-color: {{lineColors[2]}}">
+  <view class="section_title">水印</view>
+  <input class="input_editor" maxlength="25" bindinput="watermarkBindKeyInput" bindfocus = "changelinecolor" bindblur="cleanlinecolor" type="text" placeholder="{{watermark}}" data-id ="2" />
+  </view>
+  <view class="section" style="  background-color: {{lineColors[3]}}">
+  <view class="section_title">添加说明</view>
+  <input class="input_editor" maxlength="50" bindinput="commentsBindKeyInput" bindfocus = "changelinecolor" bindblur="cleanlinecolor" type="text" placeholder="{{comments}}" data-id ="3" />
+  </view>
+
+  <view class="section" style="  background-color: {{lineColors[4]}}">
+  <view class="section_title">显示货号</view>
+  <checkbox class="input_editor" checked="{{codeChecked}}" data-id ="4"/>
+  </view>
+  <view class="section" style="  background-color: {{lineColors[5]}}">
+  <view class="section_title">显示水印</view>
+  <checkbox class="input_editor" checked="{{watermarkChecked}}" data-id ="5"/>
+  </view>
+  <view class="section" style="  background-color: {{lineColors[6]}}">
+  <view class="section_title">显示价格</view>
+  <checkbox class="input_editor" checked="{{priceChecked}}" data-id ="6"/>
+  </view>
+
+</view>
